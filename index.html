@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулинарный портал — Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="site">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="logo">🍳 Кулинарный портал</div>
+            <div class="header-actions">
+                <a href="recipes.html" class="nav-btn">Рецепты</a>
+                <a href="articles.html" class="nav-btn">Статьи</a>
+                <button class="login-btn" onclick="showLogin()">🔐 Логин</button>
+            </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav">
+            <a href="index.html" class="active">Главная</a>
+            <a href="recipes.html">Рецепты</a>
+            <a href="articles.html">Статьи</a>
+            <a href="#footer">Контакты</a>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Баннер -->
+            <section class="hero">
+                <h1>🍽 Вкусная еда</h1>
+                <p>Простые рецепты и вдохновение для каждого дня</p>
+                <a href="recipes.html" class="hero-btn">Смотреть рецепты</a>
+            </section>
+
+            <!-- Популярные рецепты -->
+            <section class="section">
+                <div class="section-header">
+                    <h2>🔥 Популярные рецепты</h2>
+                    <a href="recipes.html" class="section-link">Все рецепты →</a>
+                </div>
+                <div class="recipes-grid">
+                    <div class="recipe-card">
+                        <h3>Рецепт 1</h3>
+                        <p>Паста Карбонара</p>
+                        <span class="recipe-tag">Итальянская</span>
+                    </div>
+                    <div class="recipe-card">
+                        <h3>Рецепт 2</h3>
+                        <p>Классический борщ</p>
+                        <span class="recipe-tag">Украинская</span>
+                    </div>
+                    <div class="recipe-card">
+                        <h3>Рецепт 3</h3>
+                        <p>Цезарь с курицей</p>
+                        <span class="recipe-tag">Салат</span>
+                    </div>
+                    <div class="recipe-card">
+                        <h3>Рецепт 4</h3>
+                        <p>Сырный суп</p>
+                        <span class="recipe-tag">Супы</span>
+                    </div>
+                    <div class="recipe-card">
+                        <h3>Рецепт 5</h3>
+                        <p>Оливье домашний</p>
+                        <span class="recipe-tag">Салаты</span>
+                    </div>
+                    <div class="recipe-card">
+                        <h3>Рецепт 6</h3>
+                        <p>Шарлотка с яблоками</p>
+                        <span class="recipe-tag">Десерты</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Категории -->
+            <section class="section categories-section">
+                <div class="section-header">
+                    <h2>📂 Категории</h2>
+                </div>
+                <div class="categories-list">
+                    <a href="#" class="category-item">🍲 Супы</a>
+                    <a href="#" class="category-item">🥗 Салаты</a>
+                    <a href="#" class="category-item">🍝 Паста и пицца</a>
+                    <a href="#" class="category-item">🥩 Мясные блюда</a>
+                    <a href="#" class="category-item">🍰 Десерты</a>
+                    <a href="#" class="category-item">🥑 Вегетарианское</a>
+                    <a href="#" class="category-item">🍳 Завтраки</a>
+                    <a href="#" class="category-item">🥙 Выпечка</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer id="footer" class="footer">
+            <div class="footer-info">
+                <h4>О проекте</h4>
+                <p>Проекты рецептов и вдохновение для каждого дня.</p>
+                <p>📧 <a href="mailto:recapessite@mail.ru">recapessite@mail.ru</a></p>
+                <p>📞 <a href="tel:+88005553535">+8 800 555-35-35</a></p>
+                <div class="social">
+                    <span>📘</span>
+                    <span>📷</span>
+                    <span>🎵</span>
+                </div>
+            </div>
+
+            <div class="footer-form">
+                <h4>Обратная связь</h4>
+                <form onsubmit="submitFeedback(event)">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Ваш email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="2" placeholder="Сообщение" required></textarea>
+                    </div>
+                    <button type="submit">Отправить</button>
+                </form>
+                <p style="font-size: 10px; margin-top: 8px; opacity: 0.7;">* Мы не передаём данные третьим лицам</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

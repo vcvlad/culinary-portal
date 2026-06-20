@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулинарный портал — Статьи</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="site">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="logo">🍳 Кулинарный портал</div>
+            <div class="header-actions">
+                <a href="recipes.html" class="nav-btn">Рецепты</a>
+                <a href="articles.html" class="nav-btn active">Статьи</a>
+                <button class="login-btn" onclick="showLogin()">🔐 Логин</button>
+            </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="recipes.html">Рецепты</a>
+            <a href="articles.html" class="active">Статьи</a>
+            <a href="index.html#footer">Контакты</a>
+        </nav>
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <a href="index.html">Главная страница</a> / <span>Статьи</span>
+        </div>
+
+        <!-- Основной контент -->
+        <div class="main-content">
+            <!-- Статьи -->
+            <section class="articles-section">
+                <div class="section-header">
+                    <h2>📖 Свежие статьи</h2>
+                </div>
+                
+                <div class="article-card" onclick="showArticle('Секреты идеального теста для пиццы')">
+                    <h3>Статья 1: Секреты идеального теста для пиццы</h3>
+                    <div class="article-meta">
+                        <span>📅 15 марта 2025</span>
+                        <span>👁️ 2 345 просмотров</span>
+                    </div>
+                    <p>Как добиться хрустящей корочки и нежной мякоти? Рассказываем о правильной муке, температуре воды и времени расстойки. Домашняя пицца станет вашим коронным блюдом!</p>
+                    <span class="read-more">Читать далее →</span>
+                </div>
+                
+                <div class="article-card" onclick="showArticle('Правильное питание для всей семьи')">
+                    <h3>Статья 2: Правильное питание для всей семьи</h3>
+                    <div class="article-meta">
+                        <span>📅 10 марта 2025</span>
+                        <span>👁️ 1 892 просмотра</span>
+                    </div>
+                    <p>Составляем бюджетное и полезное меню на неделю. Советы по выбору продуктов, балансу БЖУ и вкусным перекусам без вреда для здоровья.</p>
+                    <span class="read-more">Читать далее →</span>
+                </div>
+                
+                <div class="article-card" onclick="showArticle('История шоколада: от ацтеков до наших дней')">
+                    <h3>Статья 3: История шоколада: от ацтеков до наших дней</h3>
+                    <div class="article-meta">
+                        <span>📅 5 марта 2025</span>
+                        <span>👁️ 3 102 просмотра</span>
+                    </div>
+                    <p>Узнайте, как напиток богов превратился в любимое лакомство миллионов. Интересные факты о происхождении какао и первых шоколадных плитках.</p>
+                    <span class="read-more">Читать далее →</span>
+                </div>
+            </section>
+
+            <!-- Сайдбар: поиск, теги, подборки -->
+            <aside class="sidebar">
+                <!-- Поиск -->
+                <div class="search-box">
+                    <div class="sidebar-title">🔍 Поиск</div>
+                    <input type="text" class="search-input" placeholder="Поиск по статьям..." oninput="searchArticles(this.value)">
+                </div>
+
+                <!-- Теги -->
+                <div class="tags-block">
+                    <div class="sidebar-title">🏷️ Теги</div>
+                    <div class="tags-list">
+                        <span class="tag">#выпечка</span>
+                        <span class="tag">#пицца</span>
+                        <span class="tag">#десерты</span>
+                        <span class="tag">#пп</span>
+                        <span class="tag">#супы</span>
+                        <span class="tag">#салаты</span>
+                        <span class="tag">#завтрак</span>
+                        <span class="tag">#постное</span>
+                        <span class="tag">#быстро</span>
+                    </div>
+                </div>
+
+                <!-- Подборки -->
+                <div class="collections-block">
+                    <div class="sidebar-title">📚 Подборки</div>
+                    <ul class="collection-list">
+                        <li>🥘 Ужин за 30 минут</li>
+                        <li>🥗 ПП-рецепты для стройности</li>
+                        <li>🍰 Десерты без выпечки</li>
+                        <li>🍲 Согревающие супы на зиму</li>
+                        <li>🍳 Завтраки для всей семьи</li>
+                        <li>🎄 Праздничное меню</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-info">
+                <h4>О проекте</h4>
+                <p>Проекты рецептов и вдохновение для каждого дня.</p>
+                <p>📧 <a href="mailto:recapessite@mail.ru">recapessite@mail.ru</a></p>
+                <p>📞 <a href="tel:+88005553535">+8 800 555-35-35</a></p>
+                <div class="social">
+                    <span>📘</span>
+                    <span>📷</span>
+                    <span>🎵</span>
+                </div>
+            </div>
+
+            <div class="footer-form">
+                <h4>Обратная связь</h4>
+                <form onsubmit="submitFeedback(event)">
+                    <div class="form-group">
+                        <input type="text" id="name3" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email3" placeholder="Ваш email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message3" rows="2" placeholder="Сообщение" required></textarea>
+                    </div>
+                    <button type="submit">Отправить</button>
+                </form>
+                <p style="font-size: 10px; margin-top: 8px; opacity: 0.7;">* Мы не передаём данные третьим лицам</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
